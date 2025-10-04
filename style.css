@@ -1,0 +1,192 @@
+/*
+ * Shared stylesheet for Rebecca Frain Counselling website
+ *
+ * This stylesheet defines a calm and welcoming colour palette and
+ * provides basic layout styling for the navigation bar, hero
+ * section, page sections and footer. It also includes a responsive
+ * breakpoint for smaller screens.
+ */
+
+/* Colour and font variables for easy theming */
+:root {
+  /* Primary colour used for headings and highlights */
+  --primary-color: #79a2cf;
+  /* Secondary colour used for light backgrounds */
+  --secondary-color: #f5f9fe;
+  /* Accent colour used for call‑to‑action buttons */
+  --accent-color: #8ac6d1;
+  /* Text colour for body copy */
+  --text-color: #333;
+  /* Font families */
+  --header-font: 'Lora', serif;
+  --body-font: 'Open Sans', sans-serif;
+}
+
+/* Basic resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--text-color);
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+/* Navigation bar */
+header nav {
+  background-color: var(--secondary-color);
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e0e6ef;
+}
+
+header nav .logo {
+  font-family: var(--header-font);
+  font-size: 1.6rem;
+  color: var(--primary-color);
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 6px 10px;
+  transition: color 0.3s, background-color 0.3s;
+  border-radius: 4px;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+  color: #fff;
+  background-color: var(--primary-color);
+}
+
+/* Hero section */
+.hero {
+  background-image: url('images/hero.png');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+/* Dark overlay to improve text contrast on the hero image */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  /* Dark overlay helps text stand out on the hero image. Adjust opacity as needed */
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.hero .content {
+  position: relative;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-family: var(--header-font);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero a.button {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.hero a.button:hover {
+  background-color: var(--primary-color);
+}
+
+/* Generic section styling */
+.section {
+  padding: 60px 20px;
+}
+
+.section h2 {
+  font-family: var(--header-font);
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section .content {
+  max-width: 900px;
+  margin: auto;
+  font-size: 1.1rem;
+}
+
+.section p {
+  margin-bottom: 20px;
+}
+
+/* Alternate light background */
+.section-light {
+  background-color: var(--secondary-color);
+}
+
+/* Footer */
+footer {
+  background-color: var(--secondary-color);
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  border-top: 1px solid #e0e6ef;
+}
+
+footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}

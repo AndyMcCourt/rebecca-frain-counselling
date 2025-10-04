@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Rebecca Frain Counselling</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Additional styles for the contact page */
+      .contact-details {
+        margin-bottom: 30px;
+      }
+      .contact-details p {
+        margin-bottom: 10px;
+      }
+      .contact-form label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .contact-form button {
+        background-color: var(--accent-color);
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .contact-form button:hover {
+        background-color: var(--primary-color);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Rebecca&nbsp;Frain&nbsp;Counselling</div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="section section-light">
+        <h2>Get in Touch</h2>
+        <div class="content">
+          <div class="contact-details">
+            <p>
+              If you have any questions or would like to arrange an initial
+              appointment, please feel free to get in touch.
+            </p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:rebecca@example.com">rebecca@example.com</a>
+            </p>
+            <p>
+              <strong>Telephone:</strong> +44 (0)7712 345678
+            </p>
+            <p>
+              <strong>Location:</strong> Lymm, Cheshire, United Kingdom
+            </p>
+          </div>
+          <!-- Simple contact form: visitors can copy and paste details or send via mailto once configured -->
+          <form class="contact-form" action="mailto:rebecca@example.com" method="post" enctype="text/plain">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+          </form>
+          <p style="margin-top: 10px; font-size: 0.9rem; color: #666;">
+            Please note: the form above uses a <code>mailto:</code> link. When you
+            click “Send Message,” your email application may open to compose
+            your message. You can also send an email directly or phone me using
+            the details listed.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        © 2025 Rebecca Frain Counselling. This website is for informational
+        purposes only and does not provide medical or psychological advice.
+      </p>
+    </footer>
+  </body>
+</html>
