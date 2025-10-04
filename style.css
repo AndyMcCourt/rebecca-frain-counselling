@@ -68,11 +68,15 @@ header {
   box-shadow: 0 1px 3px rgba(0,0,0,0.06);
 }
 .navbar {
+  /* Flex layout for header items */
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
-  padding: 0.8rem 0;
+  /* Horizontal padding and centring */
+  padding: 0.8rem 1rem;
+  width: min(1100px, 92vw);
+  margin-inline: auto;
 }
 .logo {
   font-family: var(--header-font);
@@ -275,6 +279,13 @@ form button:hover {
   }
   section {
     padding: 1.25rem 0;
+  }
+
+  /* Make the header navbar span the full viewport on small screens */
+  .navbar {
+    width: 100%;
+    margin-inline: 0;
+    padding: 0.8rem 1rem;
   }
 
   /* Allow containers to span the full width on small screens */
