@@ -12,20 +12,23 @@
   </head>
   <body>
     <header>
-      <nav>
-        <div class="logo">Rebecca&nbsp;Frain&nbsp;Counselling</div>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" class="active">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="container navbar">
+        <a class="logo" href="index.html">Rebecca&nbsp;Frain&nbsp;Counselling</a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          ☰ Menu
+        </button>
+        <nav class="nav-links" role="navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html" class="active">About</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
     </header>
     <main>
       <section class="section section-light">
-        <h2>About Rebecca</h2>
-        <div class="content">
+        <div class="container">
+          <h2>About Rebecca</h2>
           <p>
             Hello, I’m Rebecca Frain, a professional counsellor based in Lymm,
             Cheshire. I am passionate about supporting individuals to navigate
@@ -56,11 +59,26 @@
         </div>
       </section>
     </main>
-    <footer>
-      <p>
-        © 2025 Rebecca Frain Counselling. This website is for informational
-        purposes only and does not provide medical or psychological advice.
-      </p>
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          © 2025 Rebecca Frain Counselling. This website is for informational
+          purposes only and does not provide medical or psychological advice.
+        </p>
+      </div>
     </footer>
+
+    <!-- Navigation toggle script -->
+    <script>
+      const toggleButton = document.querySelector('.nav-toggle');
+      const headerEl = document.querySelector('header');
+      const navLinks = document.querySelector('.nav-links');
+      if (toggleButton && headerEl && navLinks) {
+        toggleButton.addEventListener('click', () => {
+          const open = headerEl.classList.toggle('nav-open');
+          toggleButton.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      }
+    </script>
   </body>
 </html>
