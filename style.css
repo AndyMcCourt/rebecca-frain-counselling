@@ -296,6 +296,20 @@ form button:hover {
     order: -1;
   }
 
+  /* Side-drawer styling for the open mobile menu */
+  .nav-open .nav-links {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 75%;
+    max-width: 280px;
+    height: 100vh;
+    background-color: #fff;
+    padding: 4rem 1rem 1rem;
+    box-shadow: 2px 0 6px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+
   /* Allow containers to span the full width on small screens */
   .container {
     width: 100%;
@@ -304,7 +318,7 @@ form button:hover {
   }
 }
 
-/* When navigation is open on mobile */
+/* When navigation is open (desktop/tablet) */
 .nav-open .nav-links {
   display: flex !important;
   flex-direction: column;
