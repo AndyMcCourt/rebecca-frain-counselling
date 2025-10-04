@@ -276,6 +276,13 @@ form button:hover {
   section {
     padding: 1.25rem 0;
   }
+
+  /* Allow containers to span the full width on small screens */
+  .container {
+    width: 100%;
+    margin-inline: 0;
+    padding-inline: 1rem;
+  }
 }
 
 /* When navigation is open on mobile */
