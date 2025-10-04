@@ -12,53 +12,37 @@
     <style>
       /* Additional styles for the contact page */
       .contact-details {
-        margin-bottom: 30px;
+        margin-bottom: 1.5rem;
       }
       .contact-details p {
-        margin-bottom: 10px;
+        margin-bottom: 0.6rem;
       }
       .contact-form label {
         display: block;
-        margin-bottom: 5px;
-      }
-      .contact-form input,
-      .contact-form textarea {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 15px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-      }
-      .contact-form button {
-        background-color: var(--accent-color);
-        color: #fff;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-      .contact-form button:hover {
-        background-color: var(--primary-color);
+        margin-bottom: 0.25rem;
+        font-weight: 600;
       }
     </style>
   </head>
   <body>
     <header>
-      <nav>
-        <div class="logo">Rebecca&nbsp;Frain&nbsp;Counselling</div>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="container navbar">
+        <a class="logo" href="index.html">Rebecca&nbsp;Frain&nbsp;Counselling</a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          ☰ Menu
+        </button>
+        <nav class="nav-links" role="navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html" class="active">Contact</a>
+        </nav>
+      </div>
     </header>
     <main>
       <section class="section section-light">
-        <h2>Get in Touch</h2>
-        <div class="content">
+        <div class="container">
+          <h2>Get in Touch</h2>
           <div class="contact-details">
             <p>
               If you have any questions or would like to arrange an initial
@@ -88,7 +72,7 @@
 
             <button type="submit">Send Message</button>
           </form>
-          <p style="margin-top: 10px; font-size: 0.9rem; color: #666;">
+          <p style="margin-top: 0.6rem; font-size: 0.9rem; color: #666;">
             Please note: the form above uses a <code>mailto:</code> link. When you
             click “Send Message,” your email application may open to compose
             your message. You can also send an email directly or phone me using
@@ -97,11 +81,26 @@
         </div>
       </section>
     </main>
-    <footer>
-      <p>
-        © 2025 Rebecca Frain Counselling. This website is for informational
-        purposes only and does not provide medical or psychological advice.
-      </p>
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          © 2025 Rebecca Frain Counselling. This website is for informational
+          purposes only and does not provide medical or psychological advice.
+        </p>
+      </div>
     </footer>
+
+    <!-- Navigation toggle script -->
+    <script>
+      const toggleButton = document.querySelector('.nav-toggle');
+      const headerEl = document.querySelector('header');
+      const navLinks = document.querySelector('.nav-links');
+      if (toggleButton && headerEl && navLinks) {
+        toggleButton.addEventListener('click', () => {
+          const open = headerEl.classList.toggle('nav-open');
+          toggleButton.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      }
+    </script>
   </body>
 </html>
