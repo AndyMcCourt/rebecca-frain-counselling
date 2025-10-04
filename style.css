@@ -298,6 +298,10 @@ form button:hover {
 
   /* Side-drawer styling for the open mobile menu */
   .nav-open .nav-links {
+    /* Display the hidden nav as a column when open */
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
     position: fixed;
     left: 0;
     top: 0;
@@ -318,10 +322,12 @@ form button:hover {
   }
 }
 
-/* When navigation is open (desktop/tablet) */
-.nav-open .nav-links {
-  display: flex !important;
-  flex-direction: column;
-  gap: 0.6rem;
-  padding-top: 0.6rem;
+/* When navigation is open on larger screens (>=641px) show links below header */
+@media (min-width: 641px) {
+  .nav-open .nav-links {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding-top: 0.6rem;
+  }
 }
