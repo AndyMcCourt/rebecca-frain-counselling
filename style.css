@@ -94,9 +94,13 @@ header {
   border-radius: 8px;
   transition: background-color 0.3s;
 }
-.nav-links a:hover,
-.nav-links a.active {
+/* Hover and active states for navigation links */
+.nav-links a:hover {
   background: var(--secondary-color);
+}
+.nav-links a.active {
+  background: var(--primary-color);
+  color: #fff;
 }
 
 /* Mobile menu toggle button */
