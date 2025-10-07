@@ -116,6 +116,8 @@ header {
   padding: 0.5rem 0.65rem;
   cursor: pointer;
   font-size: 1rem;
+    /* Ensure toggle stays above the slide-out menu on mobile */
+    z-index: 1000;
 }
 
 /* Hero section with overlay and centered content */
