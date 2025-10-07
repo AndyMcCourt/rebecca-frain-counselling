@@ -298,6 +298,16 @@ form button:hover {
   /* Place the menu toggle to the far left in the header */
   .nav-toggle {
     order: -1;
+    /* Do not allow the toggle to grow or shrink; keep it a fixed size */
+    flex: 0 0 auto;
+  }
+
+  /* Ensure the site logo adapts to the available space on mobile */
+  .logo {
+    /* Allow the logo to take up remaining space and wrap if necessary */
+    flex: 1 1 auto;
+    font-size: 1.4rem;
+    white-space: normal;
   }
 
   /* Side-drawer styling for the open mobile menu */
